@@ -25,7 +25,7 @@ public class FrutaProceso {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        System.out.println("Conexión realizada");
+        System.out.println("Conexión realizada fruta");
     }
 
     public ArrayList<Fruta> listaFrutaArrayList() throws SQLException {

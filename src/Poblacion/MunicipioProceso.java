@@ -21,7 +21,7 @@ public class MunicipioProceso {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        System.out.println("Conexión realizada");
+        System.out.println("Conexión realizada municipio");
     }
 
     public ArrayList<Municipio> listaMunicipiosArrayList() throws SQLException {
