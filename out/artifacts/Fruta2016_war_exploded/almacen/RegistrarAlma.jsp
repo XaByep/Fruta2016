@@ -21,29 +21,29 @@
 
         <div id="form-main">
             <div id="form-div">
-                <form class="form" id="form1">
+                <form class="form" id="form1" action="registrarChequear.jsp">
 
                     <p class="name">
-                        <input name="usuario" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Usuario" id="name" />
+                        <input name="usuario" type="text" required="" maxlength="25" class="validate[required,custom[onlyLetter],length[0,25]] feedback-input" placeholder="Usuario" id="name" />
                     </p>
                     <p class="paswd">
-                        <input name="paswd" type="password" class="validate[required,custom[paswd]] feedback-input" id="paswd" placeholder="Contraseña" />
+                        <input name="paswd" type="password" required="" maxlength="50" class="validate[required,custom[paswd],length[0,50]] feedback-input" id="paswd" placeholder="Contraseña" />
                     </p>
 
                     <p class="nombre">
-                        <input name="nombre" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Nombre" id="nombre" />
+                        <input name="nombre" type="text" required="" maxlength="25" class="validate[required,custom[onlyLetter]] feedback-input" placeholder="Nombre" id="nombre" />
                     </p>
 
                     <p class="cif">
-                        <input name="cif" type="text" class="validate[required,custom[cif]] feedback-input" id="cif" placeholder="N.I.F/C.I.F" />
+                        <input name="cif" type="text" required="" maxlength="9" class="validate[required,custom[cif]] feedback-input" id="cif" placeholder="N.I.F/C.I.F" />
                     </p>
 
                     <p class="direccion">
-                        <input name="direccion" type="text" class="validate[required,custom[direccion]] feedback-input" id="direccion" placeholder="Dirección" />
+                        <input name="direccion" type="text" required="" maxlength="50" class="validate[required,custom[direccion],length[0,50]] feedback-input" id="direccion" placeholder="Dirección" />
                     </p>
 
                     <p class="telefono">
-                        <input name="telefono" type="text" class="validate[required,custom[telefono]] feedback-input" id="telefono" placeholder="Teléfono" />
+                        <input name="telefono" type="text"  maxlength="12" class="validate[required,custom[telefono],length[0,12]] feedback-input" id="telefono" placeholder="Teléfono" />
                     </p>
 
                     <p class="cp">
@@ -51,7 +51,7 @@
                             ArrayList<Municipio> listaMunicipios = new MunicipioProceso().listaMunicipiosArrayList();
 
                         %>
-                        <select name="cp" class="validate[required,length[0,100]] feedback-input cp" id="cp" >
+                        <select name="cp" class="validate[required,length[0,5]] feedback-input cp" id="cp" >
                             <% for (Municipio municipio: listaMunicipios) {%>
                             <option value="<%=municipio%>"><%=municipio%></option>
                             <%}%>
@@ -65,6 +65,6 @@
                 </form>
             </div>
         </div>
-        <script src="RegistrarAlma.jsp"></script>
+        <script src="registrarAlma.jsp"></script>
     </body>
 </html>

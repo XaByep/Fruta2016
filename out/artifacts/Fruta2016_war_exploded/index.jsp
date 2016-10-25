@@ -14,14 +14,14 @@
   </head>
 
   <body>
-    <% if (session.getAttribute("idSesion") == null){
-      session.setAttribute("idSesion", session.getId());
-    }
-      if (session.getAttribute("idSesion") == session.getId()){
-        System.out.println("Todo va bien");
-        //System.out.println(session.getAttribute("idSesion"));
-      }
-    %>
+    <%--<% if (session.getAttribute("idSesion") == null){--%>
+      <%--session.setAttribute("idSesion", session.getId());--%>
+    <%--}--%>
+      <%--if (session.getAttribute("idSesion") == session.getId()){--%>
+        <%--System.out.println("Todo va bien");--%>
+        <%--//System.out.println(session.getAttribute("idSesion"));--%>
+      <%--}--%>
+    <%--%>--%>
 
     <div class="container">
       <section id="content">
@@ -35,7 +35,7 @@
           </div>
           <div>
             <input type="submit" value="Iniciar Sesión" />
-            <a href="almacen/RegistrarAlma.jsp">Registrar</a>
+            <a href="almacen/registrarAlma.jsp">Registrar</a>
           </div>
         </form><!-- form -->
       </section><!-- content -->
