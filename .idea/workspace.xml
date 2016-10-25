@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="2a03c9ce-8dfd-4918-9e2f-d2b393f1766c" name="Default" comment="Update">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Fruta2016_war_exploded/WEB-INF/classes/Almacen/ControlAlmacen.class" afterPath="$PROJECT_DIR$/out/artifacts/Fruta2016_war_exploded/WEB-INF/classes/Almacen/ControlAlmacen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Fruta2016_war_exploded/WEB-INF/classes/Almacen/IControlAlmacen.class" afterPath="$PROJECT_DIR$/out/artifacts/Fruta2016_war_exploded/WEB-INF/classes/Almacen/IControlAlmacen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fruta2016/Almacen/ControlAlmacen.class" afterPath="$PROJECT_DIR$/out/production/Fruta2016/Almacen/ControlAlmacen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Fruta2016/Almacen/IControlAlmacen.class" afterPath="$PROJECT_DIR$/out/production/Fruta2016/Almacen/IControlAlmacen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Fruta2016_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Fruta2016_war_exploded.xml" />
+    <list default="true" readonly="true" id="2a03c9ce-8dfd-4918-9e2f-d2b393f1766c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Fruta2016_war_exploded/almacen/RegistrarAlma.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Fruta2016_war_exploded/almacen/RegistrarAlma.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Fruta2016_war_exploded/almacen/registrarChequear.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Fruta2016_war_exploded/almacen/registrarChequear.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Almacen/ControlAlmacen.java" afterPath="$PROJECT_DIR$/src/Almacen/ControlAlmacen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Almacen/IControlAlmacen.java" afterPath="$PROJECT_DIR$/src/Almacen/IControlAlmacen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/almacen/RegistrarAlma.jsp" afterPath="$PROJECT_DIR$/web/almacen/RegistrarAlma.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/almacen/registrarChequear.jsp" afterPath="$PROJECT_DIR$/web/almacen/registrarChequear.jsp" />
     </list>
     <ignored path="Fruta2016.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,14 +72,24 @@
       <file leaf-file-name="registrarChequear.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/almacen/registrarChequear.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="272">
               <caret line="26" column="53" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControlAlmacen.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="registrarAlma.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/almacen/registrarAlma.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControlAlmacen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Almacen/ControlAlmacen.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -151,10 +150,10 @@
         <option value="$PROJECT_DIR$/src/Fruta/FrutaProceso.java" />
         <option value="$PROJECT_DIR$/src/Poblacion/MunicipioProceso.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/almacen/registrarAlma.jsp" />
         <option value="$PROJECT_DIR$/src/Almacen/IControlAlmacen.java" />
         <option value="$PROJECT_DIR$/web/almacen/registrarChequear.jsp" />
         <option value="$PROJECT_DIR$/src/Almacen/ControlAlmacen.java" />
+        <option value="$PROJECT_DIR$/web/almacen/registrarAlma.jsp" />
       </list>
     </option>
   </component>
@@ -244,6 +243,38 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="Fruta2016">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Fruta2016">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="web">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Fruta2016">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="web">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="almacen">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -960,7 +991,7 @@
       <workItem from="1477310151060" duration="372000" />
       <workItem from="1477315787726" duration="821000" />
       <workItem from="1477317920916" duration="1203000" />
-      <workItem from="1477379488820" duration="3379000" />
+      <workItem from="1477379488820" duration="3668000" />
     </task>
     <task id="LOCAL-00001" summary="Prueba">
       <created>1477087178034</created>
@@ -983,11 +1014,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477310178743</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update">
+      <created>1477383913134</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1477383913134</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64145000" />
+    <option name="totallyTimeSpent" value="64434000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1003,11 +1041,11 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61865795" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.61865795" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24281392" sideWeight="0.4942717" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24281392" sideWeight="0.4942717" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5057283" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1315,14 +1353,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/almacen/registrarAlma.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Almacen/IControlAlmacen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1339,18 +1369,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Almacen/ControlAlmacen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="35" column="154" selection-start-line="35" selection-start-column="154" selection-end-line="35" selection-end-column="154" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/almacen/registrarChequear.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="272">
           <caret line="26" column="53" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Almacen/ControlAlmacen.java">
+    <entry file="file://$PROJECT_DIR$/web/almacen/registrarAlma.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="35" column="154" selection-start-line="35" selection-start-column="154" selection-end-line="35" selection-end-column="154" />
+        <state relative-caret-position="203">
+          <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
           <folding />
         </state>
       </provider>

@@ -55,11 +55,11 @@
                             <% for (Municipio municipio: listaMunicipios) {
                                 if(municipio.getCodigoPostal().equals("06200")){
                                     %><option selected="selected" value="<%=municipio%>"><%=municipio%></option><%
-                                }
+                                }else{
                             %>
 
                             <option value="<%=municipio%>"><%=municipio%></option>
-                            <%}%>
+                            <%}}%>
                         </select>
                     </p>
 
