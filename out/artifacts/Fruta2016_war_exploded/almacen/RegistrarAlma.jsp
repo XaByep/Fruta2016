@@ -52,7 +52,12 @@
 
                         %>
                         <select name="cp" class="validate[required,length[0,5]] feedback-input cp" id="cp" >
-                            <% for (Municipio municipio: listaMunicipios) {%>
+                            <% for (Municipio municipio: listaMunicipios) {
+                                if(municipio.getCodigoPostal().equals("06200")){
+                                    %><option selected="selected" value="<%=municipio%>"><%=municipio%></option><%
+                                }
+                            %>
+
                             <option value="<%=municipio%>"><%=municipio%></option>
                             <%}%>
                         </select>

@@ -1,4 +1,6 @@
 <%@ page import="Almacen.ControlAlmacen" %>
+<%@ page import="org.apache.commons.codec.digest.DigestUtils" %>
+<%@ page import="Almacen.Almacen" %>
 <%--<%@ page import="org.apache.commons.codec.digest.DigestUtils" %>--%>
 <%--
   Created by IntelliJ IDEA.
@@ -17,13 +19,14 @@
     ControlAlmacen controlAlmacen=new ControlAlmacen();
     String cif=request.getParameter("cif");
     String nombreAl =request.getParameter("nombre");
-    String psw=request.getParameter("paswd");
+    String psw= DigestUtils.md5Hex(request.getParameter("paswd"));
     String nombreUsu=request.getParameter("usuario");
     String direccion=request.getParameter("direccion");
     String cp=request.getParameter("cp").substring(0,5);
     String telefono=request.getParameter("telefono");
-    String[] elementos={cif, nombreAl,direccion,telefono,cp,nombreUsu,psw};
+    Almacen elemento=new Almacen(cif, nombreAl,direccion,cp,telefono,nombreUsu,psw);
     if(!controlAlmacen.verificar(nombreUsu,cif)){
+            controlAlmacen.insertar(elemento);
             %><div><h1>Todo Correcto</h1></div>
         <%
     }else{
