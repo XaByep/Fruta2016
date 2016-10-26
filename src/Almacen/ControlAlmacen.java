@@ -1,62 +1,68 @@
 package Almacen;
 
 import AccesoBBDD.AccesoBD;
+import com.aeat.valida.Validador;
+import org.apache.commons.codec.digest.DigestUtils;
 
 import java.sql.SQLException;
 
 /**
- * Created by JAVI on 24/10/2016.
+ * Created by Yo on 24/10/2016.
  */
 public class ControlAlmacen implements IControlAlmacen {
 
     AccesoBD accesoBD;
 
-
-    public void conectar() throws SQLException, ClassNotFoundException {
+    private void conectar() throws SQLException, ClassNotFoundException {
         accesoBD = AccesoBD.getMiConexion();
         accesoBD.conectar("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/frutas2016", "root", "");
 
     }
+    //TODO:Comprobar tlf, cp
 
-    @Override
-    public boolean validarCIF(String CIF) throws SQLException, ClassNotFoundException {
-        String sql = "SELECT * FROM almacen WHERE CIF= \"" + CIF + "\";";
-        return accesoBD.executeQuery(sql).next();
+    private boolean validarCIF(String CIF) throws SQLException, ClassNotFoundException {
+        if (new Validador().checkNif(CIF) > 0) {
+            String sql = "SELECT * FROM almacen WHERE CIF= \"" + CIF + "\";";
+            return accesoBD.executeQuery(sql).next();
+        }
+        return true;
     }
 
-    @Override
-    public boolean validaUsuario(String usuario) throws SQLException, ClassNotFoundException {
-        String sql = "SELECT * FROM almacen WHERE usuarioAlmacen= \"" + usuario + "\";";
-        return accesoBD.executeQuery(sql).next();
+    private boolean validaUsuario(String usuario) throws SQLException, ClassNotFoundException {
+        if (usuario.length() <= 15 && usuario.length() > 5) {
+            String sql = "SELECT * FROM almacen WHERE usuarioAlmacen= \"" + usuario + "\";";
+            return accesoBD.executeQuery(sql).next();
+        }
+        return true;
+    }
+
+    private boolean validarDomicilio(String domicilio) {
+        if (domicilio.length() < 30 && domicilio.length() > 5) {
+            return true;
+        }
+        return false;
     }
 
     @Override
     public boolean insertar(Almacen almacen) throws SQLException, ClassNotFoundException {
         conectar();
-        String sql = "INSERT INTO `almacen`(`CIF`, `nombreAlmacen`, `direccionAlmacen`, `cpAlmacen`, `telefonoAlmacen`, `usuarioAlmacen`, `passwordAlmacen`) " +
-                "VALUES  (\"" + almacen.getCif() + "\", \"" + almacen.getNombre() + "\", \"" + almacen.getDireccion() + "\", \"" + almacen.getCodigoPostal() + "\", \"" + almacen.getTelefono() + "\", \"" + almacen.getUsuario() + "\", \"" + almacen.getContraseña() + "\")";
-        return accesoBD.executeUpdate(sql) > 0;
-
-    }
-
-    public boolean verificar(String usuario, String CIF) throws SQLException, ClassNotFoundException {
-        conectar();
-        boolean bandera;
-        bandera = validarCIF(CIF);
-        if (!bandera) {
-            bandera = validaUsuario(usuario);
+        String sql;
+        if(verificar(almacen)){
+            sql = "INSERT INTO `almacen`(`CIF`, `nombreAlmacen`, `direccionAlmacen`, `cpAlmacen`," +
+                    " `telefonoAlmacen`, `usuarioAlmacen`, `passwordAlmacen`) " +
+                    "VALUES  (\"" + almacen.getCif() + "\", \"" + almacen.getNombre() + "\", \"" + almacen.getDireccion()
+                    + "\", \"" + almacen.getCodigoPostal() + "\", \"" + almacen.getTelefono() + "\", \""
+                    + almacen.getUsuario() + "\", \"" + DigestUtils.md5Hex(almacen.getContraseña()) + "\")";
+            return accesoBD.executeUpdate(sql) > 0;
         }
-        return bandera;
-
-
+        return false;
     }
 
-
-    public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        ControlAlmacen ins = new ControlAlmacen();
-        System.out.println(ins.validarCIF("5564255-B"));
-        System.out.println(ins.validaUsuario("u1"));
+    private boolean verificar(Almacen almacen) throws SQLException, ClassNotFoundException {
+        if (!validarCIF(almacen.getCif())&&!validaUsuario(almacen.getUsuario())
+                &&validarDomicilio(almacen.getDireccion())){
+            return false;
+        }
+        return true;
     }
-
-
 }

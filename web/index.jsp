@@ -14,24 +14,24 @@
   </head>
 
   <body>
-    <%--<% if (session.getAttribute("idSesion") == null){--%>
-      <%--session.setAttribute("idSesion", session.getId());--%>
-    <%--}--%>
-      <%--if (session.getAttribute("idSesion") == session.getId()){--%>
-        <%--System.out.println("Todo va bien");--%>
-        <%--//System.out.println(session.getAttribute("idSesion"));--%>
-      <%--}--%>
-    <%--%>--%>
+    <% if (session.getAttribute("idSesion") == null){
+      session.setAttribute("idSesion", session.getId());
+    }
+      if (session.getAttribute("idSesion") == session.getId()){
+        System.out.println("Todo va bien");
+        //System.out.println(session.getAttribute("idSesion"));
+      }
+    %>
 
     <div class="container">
       <section id="content">
-        <form action="">
+        <form action="Principal/principal.jsp">
           <h1>Iniciar Sesión</h1>
           <div>
-            <input type="text" placeholder="Usuario" required="" id="username" />
+            <input name="usuario" type="text" placeholder="Usuario" required="" id="username" />
           </div>
           <div>
-            <input type="password" placeholder="Contraseña" required="" id="password" />
+            <input name="paswd" type="password" placeholder="Contraseña" required="" id="password" />
           </div>
           <div>
             <input type="submit" value="Iniciar Sesión" />

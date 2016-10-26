@@ -35,7 +35,7 @@
                     </p>
 
                     <p class="cif">
-                        <input name="cif" type="text" required="" maxlength="9" class="validate[required,custom[cif]] feedback-input" id="cif" placeholder="N.I.F/C.I.F" />
+                        <input name="cif" type="text" required="" minlength="9" maxlength="9" class="validate[required,custom[cif]] feedback-input" id="cif" placeholder="N.I.F/C.I.F" />
                     </p>
 
                     <p class="direccion">
@@ -43,7 +43,7 @@
                     </p>
 
                     <p class="telefono">
-                        <input name="telefono" type="text"  maxlength="12" class="validate[required,custom[telefono],length[0,12]] feedback-input" id="telefono" placeholder="Teléfono" />
+                        <input name="telefono" type="tel" pattern="[0-9]{9}" maxlength="9" class="validate[required,custom[telefono],length[0,12]] feedback-input" id="telefono" placeholder="Teléfono" />
                     </p>
 
                     <p class="cp">

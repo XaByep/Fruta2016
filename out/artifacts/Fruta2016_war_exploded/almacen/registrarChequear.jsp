@@ -12,26 +12,31 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Chequear datos almacén</title>
+        <title>Chequear datos almacén</title>
 </head>
 <body>
 <%
-    ControlAlmacen controlAlmacen=new ControlAlmacen();
-    String cif=request.getParameter("cif");
-    String nombreAl =request.getParameter("nombre");
-    String psw= DigestUtils.md5Hex(request.getParameter("paswd"));
-    String nombreUsu=request.getParameter("usuario");
-    String direccion=request.getParameter("direccion");
-    String cp=request.getParameter("cp").substring(0,5);
-    String telefono=request.getParameter("telefono");
-    Almacen elemento=new Almacen(cif, nombreAl,direccion,cp,telefono,nombreUsu,psw);
-    if(!controlAlmacen.verificar(nombreUsu,cif)){
-            controlAlmacen.insertar(elemento);
-            %><div><h1>Todo Correcto</h1></div>
-        <%
-    }else{
-        %><div><h1>Existe</h1></div><%
-    }
+        ControlAlmacen controlAlmacen = new ControlAlmacen();
+        String cif = request.getParameter("cif").trim();
+        String nombreAl = request.getParameter("nombre").trim();
+        String psw = request.getParameter("paswd").trim();
+        String nombreUsu = request.getParameter("usuario").trim();
+        String direccion = request.getParameter("direccion").trim();
+        String cp = request.getParameter("cp").substring(0, 5);
+        String telefono = request.getParameter("telefono").trim();
+        Almacen elemento = new Almacen(cif, nombreAl, direccion, cp, telefono, nombreUsu, psw);
+        if (!controlAlmacen.verificar(nombreUsu, cif)) {
+                controlAlmacen.insertar(elemento);
+%>
+<div><h1>Todo Correcto</h1></div>
+<meta http-equiv="refresh" content="1 ; url=../index.jsp">
+<%
+} else {
+%>
+<div><h1>ERROR</h1></div>
+<meta http-equiv="refresh" content="0.3 ; url=registrarAlma.jsp">
+<%
+        }
 %>
 
 
