@@ -4,6 +4,7 @@ package Almacen;
  * Created by Juangra on 24/10/2016.
  */
 public class Almacen {
+    private StringBuilder errores;
     private String cif;
     private String nombre;
     private String direccion;
@@ -23,6 +24,15 @@ public class Almacen {
         this.telefono = telefono;
         this.usuario = usuario;
         this.contraseña = contraseña;
+        errores=new StringBuilder("");
+    }
+
+    public void setErrores(String añadir){
+        this.errores.append(añadir);
+    }
+
+    public StringBuilder getErrores(){
+        return this.errores;
     }
 
     public String getCif() {

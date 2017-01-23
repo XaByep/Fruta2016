@@ -25,16 +25,16 @@
         String cp = request.getParameter("cp").substring(0, 5);
         String telefono = request.getParameter("telefono").trim();
         Almacen elemento = new Almacen(cif, nombreAl, direccion, cp, telefono, nombreUsu, psw);
-        if (!controlAlmacen.verificar(nombreUsu, cif)) {
-                controlAlmacen.insertar(elemento);
+        if (controlAlmacen.insertar(elemento)) {
+
 %>
 <div><h1>Todo Correcto</h1></div>
 <meta http-equiv="refresh" content="1 ; url=../index.jsp">
 <%
 } else {
 %>
-<div><h1>ERROR</h1></div>
-<meta http-equiv="refresh" content="0.3 ; url=registrarAlma.jsp">
+<div><h1>ERROR</h1><h1><% elemento.getErrores(); %></h1></div>
+<%--<meta http-equiv="refresh" content="0.5 ; url=registrarAlma.jsp">--%>
 <%
         }
 %>

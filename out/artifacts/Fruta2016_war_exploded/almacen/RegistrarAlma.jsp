@@ -70,6 +70,6 @@
                 </form>
             </div>
         </div>
-        <script src="registrarAlma.jsp"></script>
+        <%--<script src="registrarAlma.jsp"></script>--%>
     </body>
 </html>
